@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<script>
+
+		const begriffe = [
+		"Armdrücken",
+		"Armleuchter",
+		"Auto",
+		"Aalglatt",
+		"Aasgeier",
+		"Altklug",
+		"Aschenbecher",
+		"A-loch",
+		"Autotür",
+		"Autoschlüssel",
+		"Arschbombe",
+		"Angelrute",
+		"Butterdose",
+		"Buchrücken",
+		"Buntstift",
+		"Bademeister",
+		"Barhocker",
+		"Besenkammer",
+		"Bienenstich",
+		"Blattlaus",
+		"Brecheisen",
+		"Bankverbindung",
+		"Christkind",
+		"Chinapfanne",
+		"Chemielabor",
+		"Druckerpatrone",
+		"Dachterasse",
+		"Dosenöffner",
+		"Darmspülung",
+		"Dübel",
+		"Dönerbude",
+		"Erbsenzähler ",
+		"Eselsbrücke",
+		"Eisverkäufer",
+		"Eisenbahn",
+		"Elefantenhaut",
+		"Elfenbeinküste",
+		"Feuerwasser",
+		"Feuchttücher",
+		"Freudenhaus",
+		"Fundgrube",
+		"Fallobst",
+		"Freiheitsstatue",
+		"Federkissen",
+		"Frauenarzt",
+		"Gürteltasche",
+		"Glatteis",
+		"Gemüsebeet",
+		"Gorilla",
+		"Gummiboot",
+		"Giraffe",
+		"Gartenschlauch",
+		"Himmelbett",
+		"Hirtenstab",
+		"Hängematte",
+		"Haubentaucher",
+		"Hufeisen",
+		"Hirschgeweih",
+		"Hippie",
+		"Hundeleine",
+		"Irrenhaus",
+		"Imker",
+		"Igel",
+		"Internet",
+		"Indianer",
+		"Judo",
+		"Jongleur",
+		"Jagdhorn",
+		"Joghurtbecher",
+		"Kuh",
+		"Kettenkarussell",
+		"Kautabak",
+		"Kerzendocht",
+		"Klaviertaste",
+		"Käseglocke",
+		"Kuchengabel",
+		"Lochfrass",
+		"Lichterkette",
+		"Lesezeichen",
+		"Luftmatratze",
+		"Luftballon",
+		"Motorroller",
+		"Matrosenmütze",
+		"Münzautomat",
+		"Menschenaffe",
+		"Mondschein",
+		"Magnet",
+		"Müllbeutel",
+		"Nasebär",
+		"Navigationssystem",
+		"Nussschale",
+		"Naschkatze",
+		"Nähmaschine",
+		"Osterhaase",
+		"Ofenrohr",
+		"Obstmesser",
+		"Orgelpfeife",
+		"Obstkorb",
+		"Patronengürtel",
+		"Pfandflasche",
+		"Polizeiauto",
+		"Portemonnaie",
+		"Plattenspieler",
+		"Quadratzentimeter",
+		"Qualle",
+		"Querflöte",
+		"Raubüberfall",
+		"Rollator",
+		"Rübe",
+		"Rosengarten",
+		"Rundumleuchte",
+		"Reisewecker",
+		"Schlüsselloch",
+		"Statue",
+		"Schachbrett",
+		"Schnürsenkel",
+		"Seifenspender",
+		"Schreibtischlampe",
+		"Stehaufmännchen",
+		"Suppenkasper",
+		"Skilift",
+		"Sandkasten",
+		"Türklinke",
+		"Tattoonadel",
+		"Teebeutel",
+		"Triathlon",
+		"Tortenheber",
+		"U-Boot",
+		"Umhang",
+		"Überwachungskamera",
+		"USB-Kabel",
+		"Vogelnest",
+		"Vorhang",
+		"Verkehrspolizist",
+		"Waffeleisen",
+		"Wandregal",
+		"Waschbecken",
+		"Wasserball",
+		"Wasserwaage",
+		"Yoga",
+		"Zahnfee",
+		"Zigaretten",
+		"Zahnarzt",
+		"Zitronenbaum",
+		"Zimmerpflanze",
+		"Zungenkuss",
+		"Zielscheibe"
+		];
+		var song = [
+		"Armdrücken",
+		"Armleuchter",
+		"Auto",
+		"Aalglatt",
+		"Aasgeier",
+		"Altklug",
+		"Aschenbecher",
+		"A-loch",
+		"Autotür",
+		"Autoschlüssel",
+		"Arschbombe",
+		"Angelrute",
+		"Butterdose",
+		"Buchrücken",
+		"Buntstift",
+		"Bademeister",
+		"Barhocker",
+		"Besenkammer",
+		"Bienenstich",
+		"Blattlaus",
+		"Brecheisen",
+		"Bankverbindung",
+		"Christkind",
+		"Chinapfanne",
+		"Chemielabor",
+		"Druckerpatrone",
+		"Dachterasse",
+		"Dosenöffner",
+		"Darmspülung",
+		"Dübel",
+		"Dönerbude",
+		"Erbsenzähler ",
+		"Eselsbrücke",
+		"Eisverkäufer",
+		"Eisenbahn",
+		"Elefantenhaut",
+		"Elfenbeinküste",
+		"Feuerwasser",
+		"Feuchttücher",
+		"Freudenhaus",
+		"Fundgrube",
+		"Fallobst",
+		"Freiheitsstatue",
+		"Federkissen",
+		"Frauenarzt",
+		"Gürteltasche",
+		"Glatteis",
+		"Gemüsebeet",
+		"Gorilla",
+		"Gummiboot",
+		"Giraffe",
+		"Gartenschlauch",
+		"Himmelbett",
+		"Hirtenstab",
+		"Hängematte",
+		"Haubentaucher",
+		"Hufeisen",
+		"Hirschgeweih",
+		"Hippie",
+		"Hundeleine",
+		"Irrenhaus",
+		"Imker",
+		"Igel",
+		"Internet",
+		"Indianer",
+		"Judo",
+		"Jongleur",
+		"Jagdhorn",
+		"Joghurtbecher",
+		"Kuh",
+		"Kettenkarussell",
+		"Kautabak",
+		"Kerzendocht",
+		"Klaviertaste",
+		"Käseglocke",
+		"Kuchengabel",
+		"Lochfrass",
+		"Lichterkette",
+		"Lesezeichen",
+		"Luftmatratze",
+		"Luftballon",
+		"Motorroller",
+		"Matrosenmütze",
+		"Münzautomat",
+		"Menschenaffe",
+		"Mondschein",
+		"Magnet",
+		"Müllbeutel",
+		"Nasebär",
+		"Navigationssystem",
+		"Nussschale",
+		"Naschkatze",
+		"Nähmaschine",
+		"Osterhaase",
+		"Ofenrohr",
+		"Obstmesser",
+		"Orgelpfeife",
+		"Obstkorb",
+		"Patronengürtel",
+		"Pfandflasche",
+		"Polizeiauto",
+		"Portemonnaie",
+		"Plattenspieler",
+		"Quadratzentimeter",
+		"Qualle",
+		"Querflöte",
+		"Raubüberfall",
+		"Rollator",
+		"Rübe",
+		"Rosengarten",
+		"Rundumleuchte",
+		"Reisewecker",
+		"Schlüsselloch",
+		"Statue",
+		"Schachbrett",
+		"Schnürsenkel",
+		"Seifenspender",
+		"Schreibtischlampe",
+		"Stehaufmännchen",
+		"Suppenkasper",
+		"Skilift",
+		"Sandkasten",
+		"Türklinke",
+		"Tattoonadel",
+		"Teebeutel",
+		"Triathlon",
+		"Tortenheber",
+		"U-Boot",
+		"Umhang",
+		"Überwachungskamera",
+		"USB-Kabel",
+		"Vogelnest",
+		"Vorhang",
+		"Verkehrspolizist",
+		"Waffeleisen",
+		"Wandregal",
+		"Waschbecken",
+		"Wasserball",
+		"Wasserwaage",
+		"Yoga",
+		"Zahnfee",
+		"Zigaretten",
+		"Zahnarzt",
+		"Zitronenbaum",
+		"Zimmerpflanze",
+		"Zungenkuss",
+		"Zielscheibe"
+		];
+
+		function getRandomElementsFromArray(array, numberOfRandomElementsToExtract = 3) {
+		const elements = [];
+
+		function getRandomElement(arr) {
+		if (elements.length < numberOfRandomElementsToExtract) {
+		const index = Math.floor(Math.random() * arr.length)
+		const element = arr.splice(index, 1)[0];
+
+		elements.push(element)
+
+		return getRandomElement(arr)
+		} else {
+		return elements
+		}
+		}
+
+		return getRandomElement([...array])
+
+		}
+
+		function shuffleArray(){
+		const shuffle = arr => {
+		const recur = (result,arr) => {
+		if(arr.length===0){
+		return result;
+		}
+		const randomIndex = Math.floor(Math.random() * arr.length);
+		return recur(
+		result.concat([arr[randomIndex]]),
+		arr.filter((_,index)=>index!==randomIndex)
+		);
+		};
+		return recur([],arr);
+		}
+		const array = begriffe;
+		const shuffled = shuffle(array);
+		return shuffled
+		}
+
+
+		function shuffle(array) {
+		// Support
+		var support = [];
+		for(var i = 0; i < array.length; i++) {
+		support[i] = i;
+		}
+
+		// Support Build
+		for(var i = 0; i < support.length; i++) {
+		var random = Math.floor(Math.random() * (support.length - i)) + i;
+
+		if(i == (support.length - 2) && support[i + 1] == (i + 1)) {
+		   var ex = support[i];
+		   support[i] = support[i + 1];
+		   support[i + 1] = ex;
+		   break;
+		}
+
+		if(random == support[i]) {
+		   i--;
+		   continue;
+		}
+
+		var ex = support[i];
+		support[i] = support[random];
+		support[random] = ex;
+		}
+
+		// Result
+		var result = [];
+		for(var i = 0; i < support.length; i++) {
+		result[i] = array[support[i]];
+		}
+
+		return result;
+		};
+
+
+		// Array to store indexes which are left to access. 
+		// It helps in accessing values without repeating
+		var alreadyDone = [];
+
+		// Function picking random values from array
+		const randomValueFromArray = (myArray) => {
+		// If alreadyDone is empty then fill it will indexes equal
+		// to the size of myArray
+		if (alreadyDone.length === 0) {
+		for (var i = 0; i < myArray.length; i++) alreadyDone.push(i);
+		}
+
+		// Generate random number within the range of 
+		// length of alreadyDone array
+		var randomValueIndex = Math.floor(Math.random() * alreadyDone.length);
+
+		// Getting unaccessed index of myArray using above 
+		// random number
+		var indexOfItemInMyArray = alreadyDone[randomValueIndex];
+
+		// remove this index from alreadyDone array because
+		// we are accessing it now.
+		alreadyDone.splice(randomValueIndex, 1);
+
+		// Get the value
+		return myArray[indexOfItemInMyArray];
+		};
+
+
+		function randomAktion() {
+		var ranTest = getRandomElementsFromArray(begriffe),
+		ranSong = shuffleArray(),
+		ranFuck = shuffle(begriffe)
+		ranCard = randomValueFromArray(begriffe),
+		ranCard2 = randomValueFromArray(begriffe),
+		ranCard3 = randomValueFromArray(begriffe);
+
+
+		document.getElementById('ranTest').value = ranTest;
+		document.getElementById('ranSong').value = ranSong;
+		document.getElementById('ranFuck').value = ranFuck;
+		document.getElementById('ranCard').value = ranCard;
+		document.getElementById('ranCard2').value = ranCard2;	
+		document.getElementById('ranCard3').value = ranCard3;
+
+
+		}
+
+
+
+
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<button onclick="randomAktion()">Aktionskarte</button> <input name="ranTest" id="ranTest"> 
+			<input name="ranSong" id="ranSong"> 
+			<input name="ranFuck" id="ranFuck"> 
+			
+			<input name="ranCard" id="ranCard"> <input name="ranCard2" id="ranCard2"> <input name="ranCard3" id="ranCard3">
+		</p>
+	</body>
+</html>
